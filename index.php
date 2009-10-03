@@ -102,19 +102,17 @@ if(isset($_POST['submitted'])) {
 			</div>
 			<div id="right">
 				<form action="index.php" method="post">
-					<fieldset>
-					<legend>Enter Member Information</legend>
 					<table>
 						<tr>					
 							<td>First Name:</td>
 							<td>
-								<input type="text" name="first_name" size="15" maxlength="15" value="<?php if (isset($_POST['first_name'])) echo $_POST['first_name']; ?>" />
+								<input type="text" name="first_name" size="20" maxlength="20" value="<?php if (isset($_POST['first_name'])) echo $_POST['first_name']; ?>" />
 							</td>
 						</tr>
 						<tr>
 							<td>Last Name:</td>
 							<td>
-								<input type="text" name="last_name" size="15" maxlength="30" value=""<?php if (isset($_POST['last_name'])) echo $_POST['last_name']; ?>" />
+								<input type="text" name="last_name" size="20" maxlength="30" value=""<?php if (isset($_POST['last_name'])) echo $_POST['last_name']; ?>" />
 							</td>
 						</tr>
 						<tr>
@@ -125,23 +123,22 @@ if(isset($_POST['submitted'])) {
 						<tr>
 							<td>Password:</td>
 							<td>
-								<input type="password" name="password1" size="10" maxlength="20" />
+								<input type="password" name="password1" size="20" maxlength="20" />
 							</td>
 						</tr>
 						<tr>
 							<td>Confirm Password:</td>
 							<td>
-								<input type="password" name="password2" size="10" maxlength="20" />
+								<input type="password" name="password2" size="20 maxlength="20" />
 							</td>
 						</tr>
 						<tr>
 							<td colspan="2">
-								<input type="submit" name="submit" value="Register" />
+								<input style="margin: auto; display: block;" type="submit" name="submit" value="Register" />
 							</td>
 						</tr>
 					</table>
 					<input type="hidden" name="submitted" value="TRUE" />
-				  </fieldset>
 					</form>
 			</div>
 
