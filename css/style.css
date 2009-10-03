@@ -5,8 +5,13 @@
 }
  
 body {
-	background-image: url(../images/tilebg.jpg);
-	background-color: #d18620;
+	/*background-image: url(../images/tilebg.jpg);
+	background-color: #d18620;*/
+	background-image: url(../images/fallpileofleaves.gif);
+	background-attachment: fixed;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	background-color: black;
 }
  
 div.main {
@@ -59,6 +64,9 @@ div#navbar {
 	height: 125px;
 	border-bottom: 5px solid #1f0600;
 	-moz-border-radius-topright: 22px;
+	-moz-border-radius-topleft: 22px;
+	-webkit-border-radius-topright: 22px;
+	-webkit-border-radius-topleft: 22px;
 }
 
 div#navbar img {
