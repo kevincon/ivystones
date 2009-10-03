@@ -73,7 +73,7 @@ if(isset($_POST['submitted'])) {
 <?php include('header.html'); ?>
 			<div id ="left">
 				<div id="spiel">
-					IvyStones is a scavenger hunt to find the many Ivy Day stones hidden around the University of Pennsylvania campus.
+					<p>IvyStones is a scavenger hunt to find the many Ivy Day stones hidden around the University of Pennsylvania campus.</p>
 				</div>
 			</div>
 			<div id="right">
