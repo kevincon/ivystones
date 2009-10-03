@@ -96,7 +96,7 @@ if(isset($_POST['submitted'])) {
 				</ul>
 			</div>
 			<div id ="left">
-				IvyStones is a scavenger hunt to find the many Ivy Day stones hidden around the University of Pennsylvania campus.
+				<p>IvyStones is a scavenger hunt to find the many Ivy Day stones hidden around the University of Pennsylvania campus.  A typical Ivy Day stone is a piece of carved stone, approximately one-by-two feet, placed slightly below eye level at a campus site chosen by the graduating class. Some are simple, with just the text Ivy Day, the year, and an ivy motif, while others have designs that include intricate carving, inscriptions, and Penn symbols. All the stones have in common the year of the class that placed it, and virtually all have some ivy motif, to symbolize the planting of the ivy sprig at the stone's unveiling.</p>
 			</div>
 			<div id="right">
 				<form action="index.php" method="post">
