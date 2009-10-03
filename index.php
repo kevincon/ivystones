@@ -96,6 +96,7 @@ if(isset($_POST['submitted'])) {
 				</ul>
 			</div>
 			<div id ="left">
+				IvyStones is a scavenger hunt to find the many Ivy Day stones hidden around the University of Pennsylvania campus.
 			</div>
 			<div id="right">
 				<form action="index.php" method="post">
