@@ -52,8 +52,11 @@ td {
 }
  
 div#navbar {
-	text-align: center;
 	height: 1.563em;
+}
+
+div#navbar img {
+	float: left;
 }
  
 #navbar a {
