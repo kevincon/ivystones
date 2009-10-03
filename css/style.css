@@ -2,13 +2,11 @@
 	padding: 0;
 	margin: 0;
 	font-family: Arial, serif;
-	color: white;
 }
  
 body {
-	/*background-image: url(../images/gradient.jpg);
-	background-repeat: repeat-x;*/
-	background-color: grey;
+	background-image: url(../images/tilebg.jpg);
+	background-color: #d18620;
 }
  
 div.main {
@@ -20,7 +18,6 @@ div.main {
 	-moz-border-radius: 22px;
 	-webkit-border-radius: 22px;
 	-webkit-box-shadow: 8px 8px 8px #333;
-
 }
  
 div#container {
@@ -52,15 +49,22 @@ hr {
 td {
 	padding: 10px;
 }
+
+p, td{
+	color: white;
+}
  
 div#navbar {
 	background-color: #00471f;
 	height: 125px;
 	border-bottom: 5px solid #1f0600;
+	-moz-border-radius-topright: 22px;
 }
 
 div#navbar img {
 	float: left;
+	position: relative;
+	z-index: 0;
 }
  
 #navbar li a {
