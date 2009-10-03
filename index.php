@@ -77,6 +77,7 @@ if(isset($_POST['submitted'])) {
 				</div>
 			</div>
 			<div id="right">
+				<p>Become an Ivy Stoner!</p>
 				<form action="index.php" method="post">
 					<table>
 						<tr>					

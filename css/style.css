@@ -51,31 +51,26 @@ td {
 	padding: 10px;
 }
  
-div#navbar {
-	height: 1.563em;
-}
 
 div#navbar img {
 	float: left;
 }
  
-#navbar a {
+#navbar li a {
 	text-decoration: none;
-	color: black;
-	display: block;
-	border-right: 1px solid black;
-	padding: 0.2em 0.6em;
+	height: 40px;
+	float: left;
+	text-indent: -9999px;
+	color: white;
 }
  
 #navbar ul {
 	list-style-type: none;
-	background-color: white;
+	height: 40px;
 }
  
 #navbar ul li {
-	position: relative;
-	width: 10em;
-	float: left;
+	display: inline;
 }
  
 #navbar li:hover {
