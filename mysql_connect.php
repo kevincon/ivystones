@@ -4,10 +4,10 @@
 //This file also establishes a connection to MySQL and selects the database
 
 //Set the database access information as constants
-DEFINE('DB_USER', 'root');
-DEFINE('DB_PASSWORD','');
-DEFINE('DB_HOST','localhost');
-DEFINE('DB_NAME', 'FBLA site');
+DEFINE('DB_USER', 'ivystones');
+DEFINE('DB_PASSWORD','somethingwecanallremember');
+DEFINE('DB_HOST','mysql.kevinschicken.com');
+DEFINE('DB_NAME', 'ivystones');
 
 //make the connection
 $dbc=@mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) OR die('Could not connect to the MySQL: ' . mysql_error());

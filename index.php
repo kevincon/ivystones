@@ -49,7 +49,7 @@ if(isset($_POST['submitted'])) {
 	    require_once('mysql_connect.php'); //connect to db
 	    
 	    //make the db query
-	    $query="INSERT INTO members (first_name, last_name, email, password)
+	    $query="INSERT INTO members (First_Name, Last_Name, Email, Password)
 	    VALUES ('$fn','$ln','$e', SHA('$p'))";
 	    $result =@mysql_query ($query); //run the query
 	    
