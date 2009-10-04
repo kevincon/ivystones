@@ -89,85 +89,65 @@ div#navbar img {
 	float: left;
 }
  
-/*#navbar li a {
-	text-decoration: none;
+div#navbar li a {
 	height: 125px;
 	float: left;
 	text-indent: -9999px;
-	color: white;
 }
  
-#navbar ul {
+div#navbar ul {
 	list-style-type: none;
 	height: 125px;
-}*/
+}
 
-ul#navbar {	
-        		width:600px;
-        		list-style:none;
-        		height:125px;
-        		margin:0 auto; /* center nav in this demo */
-        }
+li#nav-1 a {
+	width: 133px;
+	background:url(../images/buttons2.jpg) no-repeat 0 0; /* X and Y position at 0 */
+}
 
-        ul#navbar li {
-        		display:inline;
-        }
+li#nav-1 a:hover {
+	background-position:0 -125px; /* Y position -125px for Over instance image */
+}
 
-        ul#navbar li a {
-        		height:125px;
-        		float:left;
-        		text-indent:-9999px;
-        		text-decoration:none;
-        }
+li#nav-1 a.current {
+	background-position:0 -250px; /* Y position -250px for Current instance image */
+}
 
-        ul#navbar li#navbar-1 a {
-        		width:125px;
-        		background:url(../images/buttons.jpg) no-repeat 0 0;
-        }
+li#nav-2 a {
+	width: 162px;
+	background:url(../images/buttons2.jpg) no-repeat -133px 0px; /* X and Y position at 0 */
+}
 
-        ul#navbar  li#navbar-1 a:hover {
-        		background-position:0 -125px;
-        }
+li#nav-2 a:hover {
+	background-position:-133px -125px; /* Y position -125px for Over instance image */
+}
 
-        ul#navbar  li#navbar-1 a.current {
-        		background-position:0 -250px;
-        }
-        
-        ul#navbar li#navbar-2 a {
-        		width:160px;
-        		background:url(../images/buttons.jpg) no-repeat -125px 0;
-        }
+li#nav-2 a.current {
+	background-position: -133px -250px; /* Y position -250px for Current instance image */
+}
 
-        ul#navbar  li#navbar-2 a:hover {
-        		background-position:-125px -125px;
-        }
+li#nav-3 a {
+	width: 163px;
+	background:url(../images/buttons2.jpg) no-repeat -295px 0px; /* X and Y position at 0 */
+}
 
-        ul#navbar  li#navbar-2 a.current {
-        		background-position:-125px -250px;
-        }
-        
-        ul#navbar li#navbar-3 a {
-        		width:162px;
-        		background:url(../images/buttons.jpg) no-repeat -285px 0;
-        }
+li#nav-3 a:hover {
+	background-position:-295px -125px; /* Y position -125px for Over instance image */
+}
 
-        ul#navbar  li#navbar-3 a:hover {
-        		background-position:-285px -125px;
-        }
+li#nav-3 a.current {
+	background-position: -295px -250px; /* Y position -250px for Current instance image */
+}
 
-        ul#navbar  li#navbar-3 a.current {
-        		background-position:-285px -250px;
-        }
-        
-        ul#navbar li#navbar-4 a {
-        		width:153px;
-        		background:url(../images/buttons.jpg) no-repeat -447px 0;
-        }
+li#nav-4 a {
+	width: 142px;
+	background:url(../images/buttons2.jpg) no-repeat -458px 0px; /* X and Y position at 0 */
+}
 
-        ul#navbar  li#navbar-4 a:hover {
-        		background-position:-447px -125px;
-        }
+li#nav-4 a:hover {
+	background-position:-458px -125px; /* Y position -125px for Over instance image */
+}
 
-        ul#navbar  li#navbar-4 a.current {
-        		background-position:-447px -250px;
-        }
+li#nav-4 a.current {
+	background-position: -458px -250px; /* Y position -250px for Current instance image */
+}
