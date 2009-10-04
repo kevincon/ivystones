@@ -89,7 +89,7 @@ div#navbar img {
 	float: left;
 }
  
-#navbar li a {
+/*#navbar li a {
 	text-decoration: none;
 	height: 125px;
 	float: left;
@@ -100,4 +100,74 @@ div#navbar img {
 #navbar ul {
 	list-style-type: none;
 	height: 125px;
-}
+}*/
+
+ul#navbar {	
+        		width:600px;
+        		list-style:none;
+        		height:125px;
+        		margin:0 auto; /* center nav in this demo */
+        }
+
+        ul#navbar li {
+        		display:inline;
+        }
+
+        ul#navbar li a {
+        		height:125px;
+        		float:left;
+        		text-indent:-9999px;
+        		text-decoration:none;
+        }
+
+        ul#navbar li#navbar-1 a {
+        		width:125px;
+        		background:url(../images/buttons.jpg) no-repeat 0 0;
+        }
+
+        ul#navbar  li#navbar-1 a:hover {
+        		background-position:0 -125px;
+        }
+
+        ul#navbar  li#navbar-1 a.current {
+        		background-position:0 -250px;
+        }
+        
+        ul#navbar li#navbar-2 a {
+        		width:160px;
+        		background:url(../images/buttons.jpg) no-repeat -125px 0;
+        }
+
+        ul#navbar  li#navbar-2 a:hover {
+        		background-position:-125px -125px;
+        }
+
+        ul#navbar  li#navbar-2 a.current {
+        		background-position:-125px -250px;
+        }
+        
+        ul#navbar li#navbar-3 a {
+        		width:162px;
+        		background:url(../images/buttons.jpg) no-repeat -285px 0;
+        }
+
+        ul#navbar  li#navbar-3 a:hover {
+        		background-position:-285px -125px;
+        }
+
+        ul#navbar  li#navbar-3 a.current {
+        		background-position:-285px -250px;
+        }
+        
+        ul#navbar li#navbar-4 a {
+        		width:153px;
+        		background:url(../images/buttons.jpg) no-repeat -447px 0;
+        }
+
+        ul#navbar  li#navbar-4 a:hover {
+        		background-position:-447px -125px;
+        }
+
+        ul#navbar  li#navbar-4 a.current {
+        		background-position:-447px -250px;
+        }

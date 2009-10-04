@@ -1,6 +1,6 @@
 Noodle
 -----
-*Get buttons sprite working
+*Work with Varun to get buttons to play nice with login box and logo
 *Work on other pages (about, stones, profile, log a find, etc.)
 
 Dirty
