@@ -14,18 +14,29 @@
 		<script type="text/javascript">
 			function clearText(thefield){
 				if (thefield.defaultValue==thefield.value) {
-					thefield.value = ""
-					theField.style.color = "black"; 
+					thefield.value = "";
+					document.getElementById("username").style.color = "black"; 
 				}
 			}
 			
-			function changePwd(field) {
-				field.type="password";
-				field.value="";
+			function addText(field) {
+				if (field.value == "") {
+					field.value="Email";
+					field.style.color = "#666";
+				}
 			}
 			
-			function changeText(field) {
-				field.type="text";
+			function pwdBlur() {
+				if(document.getElementById("passwordAsterix").value.length == 0) {
+					document.getElementById("passwordAsterix").style.display = "none";
+					document.getElementById("passwordText").style.display = "inline";
+				}
+			}
+			
+			function pwdFocus() {
+				document.getElementById("passwordAsterix").style.display = "inline";
+				document.getElementById("passwordText").style.display = "none";
+				document.getElementById("passwordAsterix").focus();
 			}
 		</script>
 	</head>
@@ -39,10 +50,16 @@
 					<li><a href="index.php">Home</a></li>
 					<li><a href="profile.php">Profile</a></li>
 					<li><a href="stones.php">Stones</a></li>
-					<li><a href="aboutus.php">About Us</a></li>
+					<li><a href="about.php">About Us</a></li>
 					<li id="login">
-						<input type="text" name="username" size="20" maxlength="20" id="username" value="Email" style="margin-bottom: 5px; color: #666;" onFocus="clearText(this);" />
-						<input type="password" name="password" size="20" maxlength="20" id="password" style="color: #666;" value="Password" onLoad="changeText(this);" onSelect="changePwd(this);" onFocus="changePwd(this);"/>
+						<input type="text" name="username" size="20" maxlength="20" id="username" value="Email" style="margin-bottom: 5px; color: #666;" onFocus="clearText(this);" onBlur="addText(this);" />
+						<script type="text/javascript">
+							document.write('<input name="password" id="passwordAsterix" type="password" size="20" value="" onBlur="pwdBlur()" onfocus="pwdFocus()" style="display:none;" />');
+							document.write('<input name="password" id="passwordText" type="text" size="20" value="Password" style="color: #666;" onfocus="pwdFocus()" />');
+						</script>
+						<noscript>
+							<input name="password" id="passwordnoscript" type="password" size="20" value="" />
+						</noscript>
 						<input type="submit" name="login" value="Login" class="submit" style="padding: 5px 62px 5px 54px; margin: 5px 5px 5px -2px;" />
 					</li>
 				</ul>

@@ -8,7 +8,7 @@ include('header.html');
 				</div>
 			</div>
 			<div id="right">
-				<p>Become an Ivy Stoner!</p>';
+				';
 //Check is form is submitted
 if(isset($_POST['submitted'])) {
 
@@ -87,6 +87,7 @@ if(isset($_POST['submitted'])) {
 
 	
 				<form action="index.php" method="post">
+					<p>Become an Ivy Stoner!</p>
 					<table>
 						<tr>					
 							<td>First Name:</td>
