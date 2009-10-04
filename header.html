@@ -9,7 +9,25 @@
 		<title>IvyStones</title> 
 		<link rel="stylesheet" type="text/css" href="css/style.css" /> 
 		<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" /> 
-		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" /> 
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+		
+		<script type="text/javascript">
+			function clearText(thefield){
+				if (thefield.defaultValue==thefield.value) {
+					thefield.value = ""
+					theField.style.color = "black"; 
+				}
+			}
+			
+			function changePwd(field) {
+				field.type="password";
+				field.value="";
+			}
+			
+			function changeText(field) {
+				field.type="text";
+			}
+		</script>
 	</head>
 	
 	<body>
@@ -23,8 +41,8 @@
 					<li><a href="stones.php">Stones</a></li>
 					<li><a href="aboutus.php">About Us</a></li>
 					<li id="login">
-						<input type="text" name="username" size="20" maxlength="20" id="username" style="margin-bottom: 5px" />
-						<input type="password" name="password" size="20" maxlength="20" id="password" />
+						<input type="text" name="username" size="20" maxlength="20" id="username" value="Email" style="margin-bottom: 5px; color: #666;" onFocus="clearText(this);" />
+						<input type="password" name="password" size="20" maxlength="20" id="password" style="color: #666;" value="Password" onLoad="changeText(this);" onSelect="changePwd(this);" onFocus="changePwd(this);"/>
 						<input type="submit" name="login" value="Login" class="submit" style="padding: 5px 62px 5px 54px; margin: 5px 5px 5px -2px;" />
 					</li>
 				</ul>
