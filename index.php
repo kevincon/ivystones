@@ -2,13 +2,13 @@
 
 $page_title = 'Index';
 include('header.html');
-			<div id ="left">
+			echo'<div id ="left">
 				<div id="spiel">
 					<p>IvyStones is a scavenger hunt to find the many Ivy Day stones hidden around the University of Pennsylvania campus.</p>
 				</div>
 			</div>
 			<div id="right">
-				<p>Become an Ivy Stoner!</p>
+				<p>Become an Ivy Stoner!</p>';
 //Check is form is submitted
 if(isset($_POST['submitted'])) {
 
@@ -121,5 +121,4 @@ if(isset($_POST['submitted'])) {
 
 		</div>
 	</body>
-	
 </html>

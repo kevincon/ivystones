@@ -46,6 +46,7 @@ div#right {
 h1,h2 {
 	margin: 20px;
 	text-align: center;
+	color: orange; 
 }
  
 hr {
