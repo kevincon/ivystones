@@ -65,7 +65,7 @@ if(isset($_POST['submitted'])) {
 	            <p> $fn $ln is now registered. </p>\n";
 	            $mailBody = "Thank you for registering!\nYour password is '{#_POST['password1'])'.\n\n
 				Sincerely,\nThe ivy stones Team";
-				mail($_POST['email'],'Thanks for registering!',$mailBody,'no-reply@ivystones.com');
+				mail($_POST['email'],'Thanks for registering!',$mailBody,'From: no-reply@ivystones.com');
 	            exit();
 	    } else {
 	        echo '<h1> System Error </h1>';
