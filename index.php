@@ -117,7 +117,7 @@ if(isset($_POST['submitted'])) {
 						</tr>
 						<tr>
 							<td colspan="2">
-								<input style="margin: auto; display: block; color: black;" type="submit" name="submit" value="Register" />
+								<input type="submit" name="submit" value="Register" class="submit" />
 							</td>
 						</tr>
 					</table>
