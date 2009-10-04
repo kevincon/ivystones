@@ -76,7 +76,8 @@ p, td{
 }
  
 div#navbar {
-	background-color: #00471f;
+	/*background-color: #00471f;*/
+	background: url(../images/buttons2.jpg) no-repeat 135px 0px; /* X and Y position at 0 */
 	height: 125px;
 	border-bottom: 5px solid #1f0600;
 	-moz-border-radius-topright: 22px;
