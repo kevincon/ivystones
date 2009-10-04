@@ -120,7 +120,6 @@ if(isset($_POST['submitted'])) {
 			</div>
 
 		</div>
-		
 	</body>
 	
 </html>
