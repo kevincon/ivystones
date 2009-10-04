@@ -98,14 +98,15 @@ if(isset($_POST['submitted'])) {
 						<tr>
 							<td>Last Name:</td>
 							<td>
-								<input type="text" name="last_name" size="20" maxlength="30" value=""<?php if (isset($_POST['last_name'])) echo $_POST['last_name']; ?>" />
+								<input type="text" name="last_name" size="20" maxlength="30" value="<?php if (isset($_POST['last_name'])) echo $_POST['last_name']; ?>" />
 							</td>
 						</tr>
 						<tr>
 							<td>Your Email:</td>
 							<td>
-								<input type="text" name="email" size="20" maxlength="40" value=""<?php if (isset($_POST['email'])) echo $_POST['email']; ?>" />
+								<input type="text" name="email" size="20" maxlength="40" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>" />
 							</td>
+						</tr>
 						<tr>
 							<td>Password:</td>
 							<td>
@@ -115,7 +116,7 @@ if(isset($_POST['submitted'])) {
 						<tr>
 							<td>Confirm Password:</td>
 							<td>
-								<input type="password" name="password2" size="20 maxlength="20" />
+								<input type="password" name="password2" size="20" maxlength="20" />
 							</td>
 						</tr>
 						<tr>
