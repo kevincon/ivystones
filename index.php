@@ -93,7 +93,7 @@ if(isset($_POST['submitted'])) {
 							</td>
 						</tr>
 						<tr>
-							<td>Email Address:</td>
+							<td>Your Email:</td>
 							<td>
 								<input type="text" name="email" size="20" maxlength="40" value=""<?php if (isset($_POST['email'])) echo $_POST['email']; ?>" />
 							</td>
