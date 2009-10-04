@@ -35,6 +35,12 @@ if(isset($_POST['submitted'])) {
 	    $e= trim($_POST['email']);
 	}
 	
+	//Check for a password
+	if(empty($_POST['password1'])) {
+	    $errors[]='You forgot to enter the password.';
+	} 
+	 
+	
 	//check for password match and confirmation
 	
 	    if($_POST['password1'] != $_POST['password2']) {
