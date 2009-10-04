@@ -1,0 +1,16 @@
+Noodle
+-----
+*Get buttons sprite working
+*Work on other pages (about, stones, profile, log a find, etc.)
+
+Dirty
+-----
+*PHP send email with account information
+*Login box with cookies
+*Fix bug: registers users even if no password entered
+*Check to see if email address already registered
+
+Varun
+-----
+*Fix password login field
+*Find a way to keep logo, navbar, login box constant while content below changes
