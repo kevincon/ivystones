@@ -86,6 +86,7 @@ p#percent {
 	font-size: 128px;
 	font-weight: bold;
 	text-align: center;
+	text-shadow: 0.05em 0.05em #333;
 }
  
 div#navbar {
