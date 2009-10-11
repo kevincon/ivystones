@@ -24,6 +24,7 @@ div.main {
 	-moz-border-radius: 22px;
 	-webkit-border-radius: 22px;
 	-webkit-box-shadow: 8px 8px 8px #333;
+	-moz-box-shadow: 8px 8px 8px #333;
 }
  
 div#container {
