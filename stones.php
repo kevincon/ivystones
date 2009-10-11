@@ -8,7 +8,8 @@ if(isset($_GET['lookup'])) {
 		$url=substr($url,0,-1);
 	}
 	
-	$url .= '/directory.php';
+	$stone = $_GET['stones']; 
+	$url .= "/directory.php?stones=$stone";
 	header("Location: $url");
 	exit();
 }
