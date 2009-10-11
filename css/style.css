@@ -17,6 +17,7 @@ body {
  
 div.main {
 	width: 960px;
+	min-height: 480px;
 	margin: auto;
 	border: 3px solid #1f0600;
 	overflow: auto;
