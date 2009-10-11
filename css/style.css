@@ -115,6 +115,16 @@ div#navbar ul {
 	height: 125px;
 }
 
+a {
+	color: orange;
+	text-decoration: none;
+}
+
+a.hover {
+	color: #FF6600;
+	text-decoration: underline;
+}
+
 li#nav-1 a {
 	width: 133px;
 	background:url(../images/buttons2.jpg) no-repeat 0 0; /* X and Y position at 0 */
