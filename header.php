@@ -6,7 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 	<head> 
-		<title>IvyStones</title> 
+		<?php echo '<title>IvyStones | '.$page_title.'</title>' ?>
 		<link rel="stylesheet" type="text/css" href="css/style.css" /> 
 		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" /> 
 		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />

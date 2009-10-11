@@ -1,6 +1,6 @@
 <?php
 
-
+$page_title="Stones";
 include ('header.php');
 ?>
 

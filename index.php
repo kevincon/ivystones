@@ -1,6 +1,6 @@
 <?php #script 7.3 register.php
 
-$page_title = 'Index';
+$page_title = 'Home';
 $percent = 20;
 include('header.php');
 			echo'<div id ="left">
