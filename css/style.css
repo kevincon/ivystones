@@ -32,8 +32,13 @@ div#container {
 	margin-bottom: 50px;
 }
 
+div#content {
+	padding: 15px;
+}
+
 input.submit {
 	margin: 5px auto 5px auto;
+	width: 157px;
 	display: block;
 	padding: 10px;
 }
