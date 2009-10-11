@@ -5,7 +5,8 @@ include ('header.html');
 
 <div id="content" style="text-align: center;">
 	<form action="">
-		<select name="stones">
+		<p>Choose a Stone:</p>
+		<select name="stones" id="stones">
 			<option>1873</option>
 			<option>1874</option>
 			<option>1875</option>
@@ -177,6 +178,11 @@ include ('header.html');
 			<option>2003</option>
 			<option>2004</option>
 		</select>
+		<p>Choose a task:</p>
+		<div style="width: 320px; margin: auto;">
+			<input type="submit" name="lookup" value="Lookup" class="submit" style="float: left;"  />
+			<input type="submit" name="log" value="Log a Find" class="submit" style="float: right;" />
+		</div>
 	</form>
 </body>
 </html>
