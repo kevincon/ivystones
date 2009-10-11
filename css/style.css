@@ -43,6 +43,15 @@ input.submit {
 	padding: 10px;
 }
 
+option {
+	color: black;
+}
+
+select {
+	width: 200px;
+	color: black;
+}
+
 div#left {
 	float: left;
 	width: 500px;
