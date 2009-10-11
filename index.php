@@ -5,7 +5,8 @@ $percent = 20;
 include('header.php');
 			echo'<div id ="left">
 				<div>
-					<p>IvyStones is a scavenger hunt to find the many Ivy Day stones hidden around the University of Pennsylvania campus.</p>
+					<h1>What is IvyStones?</h1>
+					<p>IvyStones is a scavenger hunt to find the many Ivy Day stones hidden around the University of Pennsylvania campus.  <a href="about.php">Read more.</a></p>
 					<p id="percent">'.$percent.'%</p>
 					<p style="text-align: center;">of Ivy Day stones found.</p>
 				</div>
@@ -90,7 +91,7 @@ if(isset($_POST['submitted'])) {
 
 	
 				<form action="index.php" method="post">
-					<p>Become an Ivy Stoner!</p>
+					<h1>Become an Ivy Stoner!</h1>
 					<table>
 						<tr>					
 							<td>First Name:</td>
