@@ -2,7 +2,7 @@
 
 $page_title = 'Index';
 $percent = 20;
-include('header.html');
+include('header.php');
 			echo'<div id ="left">
 				<div>
 					<p>IvyStones is a scavenger hunt to find the many Ivy Day stones hidden around the University of Pennsylvania campus.</p>

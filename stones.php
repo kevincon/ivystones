@@ -1,10 +1,11 @@
 <?php
 
-include ('header.html');
+
+include ('header.php');
 ?>
 
 <div id="content" style="text-align: center;">
-	<form action="">
+	<form action="stones.php" method="post">
 		<p>Choose a Stone:</p>
 		<select name="stones" id="stones">
 			<option>1873</option>

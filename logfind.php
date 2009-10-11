@@ -1,7 +1,7 @@
 <?php #script 7.3 register.php
 
 $page_title = 'Log a Find';
-include('header.html');
+include('header.php');
 echo'<div id ="content">';
 //Check is form is submitted
 if(isset($_POST['submitted'])) {
