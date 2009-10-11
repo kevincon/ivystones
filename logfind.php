@@ -1,6 +1,7 @@
 <?php #script 7.3 register.php
 
 $page_title = 'Log a Find';
+$selected = $_GET['stones'];
 include('header.php');
 echo'<div id ="content">';
 //Check is form is submitted
@@ -78,13 +79,13 @@ if(isset($_POST['submitted'])) {
     }
 }
 ?>
-	<div align="left"><h1>Log a Find</h1></div>
-	<form action="index.php" method="post">
-	<table>
+	<h1 style="text-align: center;">Log a Find</h1>
+	<form action="" method="post">
+	<table style="margin: auto;">
 		<tr>					
-			<td>First Name:</td>
+			<td>Stone:</td>
 			<td>
-				<input type="text" name="first_name" size="20" maxlength="20" value="<?php if (isset($_POST['first_name'])) echo $_POST['first_name']; ?>" />
+				<?php echo $selected; ?>
 			</td>
 		</tr>
 		<tr>
@@ -92,28 +93,9 @@ if(isset($_POST['submitted'])) {
 			<td>
 				<input type="text" name="last_name" size="20" maxlength="30" value="<?php if (isset($_POST['last_name'])) echo $_POST['last_name']; ?>" />
 			</td>
-		</tr>
-		<tr>
-			<td>Your Email:</td>
-			<td>
-				<input type="text" name="email" size="20" maxlength="40" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>" />
-			</td>
-		</tr>
-		<tr>
-			<td>Password:</td>
-			<td>
-				<input type="password" name="password1" size="20" maxlength="20" />
-			</td>
-		</tr>
-		<tr>
-			<td>Confirm Password:</td>
-			<td>
-				<input type="password" name="password2" size="20" maxlength="20" />
-			</td>
-		</tr>
 		<tr>
 			<td colspan="2">
-				<input type="submit" name="submit" value="Register" class="submit" />
+				<input type="submit" name="submit" value="Log!" class="submit" />
 			</td>
 		</tr>
 	</table>
