@@ -80,7 +80,6 @@ if(isset($_POST['submitted'])) {
 ?>
 	<div align="left"><h1>Log a Find</h1></div>
 	<form action="index.php" method="post">
-	<p>Become an Ivy Stoner!</p>
 	<table>
 		<tr>					
 			<td>First Name:</td>
