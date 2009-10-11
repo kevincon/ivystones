@@ -85,6 +85,7 @@ p, td{
 p#percent {
 	color: orange;
 	font-size: 128px;
+	font-weight: bold;
 	text-align: center;
 }
  
