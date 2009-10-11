@@ -5,7 +5,7 @@ $percent = 20;
 include('header.html');
 			echo'<div id ="left">
 				<div>
-					<p>IvyStones is a scavenger hunt to find the many Ivy Day stones hidden around the University of Pennsylvania campus.</p>
+					<p>IvyStones is a scavenger hunt to <a href="#">find</a> the many Ivy Day stones hidden around the University of Pennsylvania campus.</p>
 					<p id="percent">'.$percent.'%</p>
 					<p style="text-align: center;">of Ivy Day stones found.</p>
 				</div>
