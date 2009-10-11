@@ -2,12 +2,22 @@
 
 $page_title="Stones";
 
-
+if(isset($_GET['lookup'])) {
+	$url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']);
+	if ((substr($url,-1)=='/') OR (substr($url, -1) == '\\')) {
+		$url=substr($url,0,-1);
+	}
+	
+	$url .= '/directory.php';
+	header("Location: $url");
+	exit();
+}
+		
 include ('header.php');
 ?>
 
 <div id="content" style="text-align: center;">
-	<form action="stones.php" method="post">
+	<form action="stones.php" method="get">
 		<p>Choose a Stone:</p>
 		<select name="stones" id="stones">
 			<option>1873</option>
