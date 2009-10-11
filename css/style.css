@@ -78,7 +78,14 @@ td {
 }
 
 p, td{
+	margin-bottom: 5px;
 	color: white;
+}
+
+p#percent {
+	color: orange;
+	font-size: 128px;
+	text-align: center;
 }
  
 div#navbar {
