@@ -1,10 +1,11 @@
 <?php #script 7.3 register.php
 
-$page_title = 'Directory';
+$stone = $_GET['stone'];
+$page_title = "Ivy Stone of ".$stone;
 include('header.php');
 ?>
 			<div id ="content">
-					<p>Nothing here.</p>
+					<h1>Ivy Stone of <?php echo $stone; ?></h1>
 			</div>
 		</div>
 	</body>

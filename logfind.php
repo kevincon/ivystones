@@ -1,7 +1,7 @@
 <?php #script 7.3 register.php
 
 $page_title = 'Log a Find';
-$selected = $_GET['stones'];
+$selected = $_GET['stone'];
 include('header.php');
 echo'<div id ="content">';
 //Check is form is submitted

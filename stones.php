@@ -8,8 +8,8 @@ if(isset($_GET['lookup'])) {
 		$url=substr($url,0,-1);
 	}
 	
-	$stone = $_GET['stones']; 
-	$url .= "/directory.php?stones=$stone";
+	$stone = $_GET['stone']; 
+	$url .= "/directory.php?stone=$stone";
 	header("Location: $url");
 	exit();
 }
@@ -20,8 +20,8 @@ if(isset($_GET['log'])) {
 		$url=substr($url,0,-1);
 	}
 	
-	$stone = $_GET['stones']; 
-	$url .= "/logfind.php?stones=$stone";
+	$stone = $_GET['stone']; 
+	$url .= "/logfind.php?stone=$stone";
 	header("Location: $url");
 	exit();
 }
@@ -32,7 +32,7 @@ include ('header.php');
 <div id="content" style="text-align: center;">
 	<form action="stones.php" method="get">
 		<p>Choose a Stone:</p>
-		<select name="stones" id="stones">
+		<select name="stone" id="stones">
 			<option>1873</option>
 			<option>1874</option>
 			<option>1875</option>
