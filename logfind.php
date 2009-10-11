@@ -85,14 +85,28 @@ if(isset($_POST['submitted'])) {
 		<tr>					
 			<td>Stone:</td>
 			<td>
-				<?php echo $selected; ?>
+				<?php echo $selected;
+					$_POST['stone'] = $selected;
+				?>
 			</td>
 		</tr>
 		<tr>
-			<td>Last Name:</td>
+			<td>Location:</td>
 			<td>
-				<input type="text" name="last_name" size="20" maxlength="30" value="<?php if (isset($_POST['last_name'])) echo $_POST['last_name']; ?>" />
+				<input type="text" name="location" size="31" maxlength="31" value="<?php if (isset($_POST['location'])) echo $_POST['location']; ?>" />
 			</td>
+		<tr>
+			<td>Description:</td>
+			<td>
+				<textarea name="description" cols="23" rows="4"></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>Picture:</td>
+			<td>
+				<input type="file" name="picture" size="20" value="" />
+			</td>
+		</tr>
 		<tr>
 			<td colspan="2">
 				<input type="submit" name="submit" value="Log!" class="submit" />
