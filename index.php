@@ -1,6 +1,7 @@
 <?php #script 7.3 register.php
 
 $page_title = 'Index';
+$percent = 20;
 include('header.html');
 			echo'<div id ="left">
 				<div id="spiel">
