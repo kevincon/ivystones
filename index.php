@@ -59,17 +59,17 @@ if(isset($_POST['submitted'])) {
 	    
 	    //make the db query
 	    $query="INSERT INTO members (First_Name, Last_Name, Email, Password)
-	    VALUES ('$fn','$ln','$e', SHA('$p'))";
+	    VALUES ('$fn','$ln','$e', MD5('$p'))";
 	    $result =@mysql_query ($query); //run the query
 	    
 	    if($result) { //query sucessful
 	    
 	        echo"<h1> THANK YOU!</h1>
 	            <p> $fn $ln is now registered. </p>\n";
-	            $mailBody = "Thank you for registering!\nYour password is '{#_POST['password1'])'.\n\n
+	            /*$mailBody = "Thank you for registering!\nYour password is '{#_POST['password1'])'.\n\n
 				Sincerely,\nThe ivy stones Team";
 				mail($_POST['email'],'Thanks for registering!',$mailBody,'From: no-reply@ivystones.com');
-	            exit();
+	            exit();*/
 	    } else {
 	        echo '<h1> System Error </h1>';
 	        echo '<p>'. mysql_error().' <br /><br />Query: ' .$query. '</p>';
