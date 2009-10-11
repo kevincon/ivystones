@@ -5,6 +5,7 @@ include('header.html');
 			echo'<div id ="left">
 				<div id="spiel">
 					<p>IvyStones is a scavenger hunt to find the many Ivy Day stones hidden around the University of Pennsylvania campus.</p>
+					<p id="percent">'.$percent.'%</p>
 				</div>
 			</div>
 			<div id="right">
