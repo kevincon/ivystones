@@ -1,7 +1,7 @@
 <?php #script 7.3 register.php
 
 $page_title = 'About';
-include('header.html');
+include('header.php');
 ?>
 			<div id ="content">
 				<div align="left">
