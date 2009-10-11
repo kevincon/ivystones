@@ -12,6 +12,18 @@ if(isset($_GET['lookup'])) {
 	header("Location: $url");
 	exit();
 }
+
+if(isset($_GET['log'])) {
+	$url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']);
+	if ((substr($url,-1)=='/') OR (substr($url, -1) == '\\')) {
+		$url=substr($url,0,-1);
+	}
+	
+	$stone = $_GET['stones']; 
+	$url .= "/logfind.php?stones=$stone";
+	header("Location: $url");
+	exit();
+}
 		
 include ('header.php');
 ?>
