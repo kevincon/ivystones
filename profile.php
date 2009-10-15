@@ -4,7 +4,12 @@ $page_title = 'Profile';
 include('header.php');
 ?>
 			<div id ="content">
-					<h1><?php echo $name."'s profile"; ?></h1>
+					<?php 
+						if (isset($name))
+							echo "<h1>$name's profile<h1>";
+						else
+							echo "<h1>Log in first!</h1>";
+					?>
 			</div>
 		</div>
 	</body>
