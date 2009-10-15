@@ -5,7 +5,7 @@ session_start();
 
 $name = $_SESSION['first_name'];
 $not_logged_content = <<<TEXT
-					<input type="text" name="username" size="20" maxlength="20" id="username" value="Email" style="margin-bottom: 5px; color: #666;" onfocus="clearText(this);" onblur="addText(this);" />
+					<input type="text" name="username" size="20" maxlength="50" id="username" value="Email" style="margin-bottom: 5px; color: #666;" onfocus="clearText(this);" onblur="addText(this);" />
 					<script type="text/javascript">
 						document.write('<input name="password" id="passwordText" type="text" size="20" value="Password" style="color: #666;" onfocus="pwdFocus()" />');
 						document.write('<input name="password" id="passwordAsterix" type="password" size="20" value="" onblur="pwdBlur()" onfocus="pwdFocus()" style="display:none;" />');
