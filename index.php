@@ -83,7 +83,7 @@ if(isset($_POST['submitted'])) {
 	    foreach($errors as $msg) { //print each error
 	        echo " - $msg<br />\n";
 	    }
-	    echo '</p><p>Please Try again. </p><p><br /></p>';
+	    echo '</p><p>Please try again. </p><p><br /></p>';
 	
     }
 }
