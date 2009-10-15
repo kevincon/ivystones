@@ -1,5 +1,8 @@
 <?php
 
+session_name('YourVisitID');
+session_start();
+
 $name = $_SESSION['first_name'];
 $not_logged_content = <<<TEXT
 					<input type="text" name="username" size="20" maxlength="20" id="username" value="Email" style="margin-bottom: 5px; color: #666;" onfocus="clearText(this);" onblur="addText(this);" />
@@ -90,7 +93,9 @@ if(isset($_POST['login']))
 ////// Logout Section. Delete all session variable.
 $logout = $_POST['logout'];
 if ($logout) {
+	$_SESSION = array();
 	session_destroy();
+	header("Location: index.php");
 }
 
 ?>
