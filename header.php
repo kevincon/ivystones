@@ -17,12 +17,6 @@ $logged_content = <<<TEXT
 					<p>Logged in as $name</p>
 					<input type="submit" name="logout" value="Logout" class="submit" style="padding: 5px 62px 5px 54px; margin: 5px 5px 5px -2px;" />
 TEXT;
-
-////// Logout Section. Delete all session variable.
-$logout = $_POST['logout'];
-if ($logout) {
-	session_destroy();
-}
 ?>
 
 <!DOCTYPE html 

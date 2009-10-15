@@ -1,11 +1,11 @@
 <?php
 // Check if the form has been submitted
+
 if(isset($_POST['login'])) 
 {
     $errors=array(); //initialize error array
 	// Connect database.
 	require_once('mysql_connect.php'); //connect to db
-    
     //check for username
     if(empty($_POST['username'])) {
         $errors[]= 'You forgot to enter your username';
@@ -24,9 +24,9 @@ if(isset($_POST['login']))
     
         //retrieve the user_id and first_name fro the email/password combo
         $query = "SELECT userid, first_name FROM members WHERE email='$un' AND password=md5('$pw')";
-        
         $result=@mysql_query($query); //run the query
         $row=mysql_fetch_array($result, MYSQL_NUM); //return a record if applicable
+		echo $row;
         
         if($row) { //A record was pulled from the database.
         
@@ -54,7 +54,16 @@ if(isset($_POST['login']))
             $errors[] = mysql_error() . '<br /><br />Query: ' . $query; // Debugging message
           }
      } // end of if(empty($errors))
-     
+	 
+	 else {
+	 	    echo'<h1>Error!</h1>
+	    <p>The following error(s) occured: <br />';
+	    foreach($errors as $msg) { //print each error
+	        echo " - $msg<br />\n";
+	    }
+	    echo '</p><p>Please Try again. </p><p><br /></p>';
+     }
+	 
      mysql_close(); //close the database connection.
 } else { //form has not been submitted.
     $errors= NULL;
@@ -67,3 +76,4 @@ if ($logout) {
 }
 
 ?>
+
