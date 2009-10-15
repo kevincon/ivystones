@@ -9,18 +9,18 @@ if(isset($_POST['submitted'])) {
 
     $errors=array(); //Initialize error array.
     
-	//Check for first name
-	if(empty($_POST['first_name'])) {
-		$errors[]='You forgot to enter the first name.';
+	//Check for location
+	if(empty($_POST['location'])) {
+		$errors[]='You forgot to enter a location.';
 	} else {
-		$fn = trim($_POST['first_name']);
+		$loc = trim($_POST['location']);
 	}
 
-	//Check for last name
-	if(empty($_POST['last_name'])) {
-		$errors[]='You forgot to enter the last name.';
+	//Check for description
+	if(empty($_POST['description'])) {
+		$errors[]='You forgot to enter a description.';
 	} else {
-		$ln = trim($_POST['last_name']);
+		$desc = trim($_POST['description']);
 	}
 	
 	//Check for an email address
@@ -30,19 +30,6 @@ if(isset($_POST['submitted'])) {
 	    $e= trim($_POST['email']);
 	}
 	
-	//Check for a password
-	if(empty($_POST['password1'])) {
-	    $errors[]='You forgot to enter the password.';
-	} 
-	 
-	
-	//check for password match and confirmation
-	
-	    if($_POST['password1'] != $_POST['password2']) {
-	        $errors[]= 'Your password did not match the confirmed password.';
-	    } else {
-	        $p= trim($_POST['password1']);
-	    }
 	
 	if(empty($errors)) { //if everything is ok
 	
@@ -56,12 +43,9 @@ if(isset($_POST['submitted'])) {
 	    
 	    if($result) { //query sucessful
 	    
-	        echo"<h1> THANK YOU!</h1>
-	            <p> $fn $ln is now registered. </p>\n";
-	            $mailBody = "Thank you for registering!\nYour password is '{#_POST['password1'])'.\n\n
-				Sincerely,\nThe ivy stones Team";
-				mail($_POST['email'],'Thanks for registering!',$mailBody,'From: no-reply@ivystones.com');
-	            exit();
+	        echo"<h1> Loggging Successful!</h1>
+	            <p> You have now logged a find of the ivy stone of the class of $selected . </p>\n";
+				
 	    } else {
 	        echo '<h1> System Error </h1>';
 	        echo '<p>'. mysql_error().' <br /><br />Query: ' .$query. '</p>';
