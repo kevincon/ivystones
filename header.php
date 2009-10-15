@@ -1,3 +1,30 @@
+<?php
+
+$name = $_SESSION['first_name'];
+$not_logged_content = <<<TEXT
+					<input type="text" name="username" size="20" maxlength="20" id="username" value="Email" style="margin-bottom: 5px; color: #666;" onfocus="clearText(this);" onblur="addText(this);" />
+					<script type="text/javascript">
+						document.write('<input name="password" id="passwordAsterix" type="password" size="20" value="" onblur="pwdBlur()" onfocus="pwdFocus()" style="display:none;" />');
+						document.write('<input name="password" id="passwordText" type="text" size="20" value="Password" style="color: #666;" onfocus="pwdFocus()" />');
+					</script>
+					<noscript>
+						<input name="password" id="passwordnoscript" type="password" size="20" value="" />
+					</noscript>
+					<input type="submit" name="login" value="Login" class="submit" style="padding: 5px 62px 5px 54px; margin: 5px 5px 5px -2px;" />
+TEXT;
+
+$logged_content = <<<TEXT
+					<p>Logged in as $name</p>
+					<input type="submit" name="logout" value="Logout" class="submit" style="padding: 5px 62px 5px 54px; margin: 5px 5px 5px -2px;" />
+TEXT;
+
+////// Logout Section. Delete all session variable.
+$logout = $_POST['logout'];
+if ($logout) {
+	session_destroy();
+}
+?>
+
 <!DOCTYPE html 
           PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
@@ -52,15 +79,16 @@
 					<li id="nav-3"><a href="stones.php">Stones</a></li>
 					<li id="nav-4"><a href="about.php">About Us</a></li>
 					<li id="login">
-						<input type="text" name="username" size="20" maxlength="20" id="username" value="Email" style="margin-bottom: 5px; color: #666;" onfocus="clearText(this);" onblur="addText(this);" />
-						<script type="text/javascript">
-							document.write('<input name="password" id="passwordAsterix" type="password" size="20" value="" onblur="pwdBlur()" onfocus="pwdFocus()" style="display:none;" />');
-							document.write('<input name="password" id="passwordText" type="text" size="20" value="Password" style="color: #666;" onfocus="pwdFocus()" />');
-						</script>
-						<noscript>
-							<input name="password" id="passwordnoscript" type="password" size="20" value="" />
-						</noscript>
-						<input type="submit" name="login" value="Login" class="submit" style="padding: 5px 62px 5px 54px; margin: 5px 5px 5px -2px;" />
+						<form action="login.php" method="post">
+							<div>
+								<?php 
+									if (isset($_SESSION['user_id']))
+										echo $logged_content; 
+									else
+										echo $not_logged_content;
+								?>
+							</div>
+						</form>
 					</li>
 				</ul>
 			</div>
