@@ -98,6 +98,27 @@ p#percent {
 	text-align: center;
 	text-shadow: 0.05em 0.05em #333;
 }
+
+li.find {
+	border-bottom: dashed white 1px;
+	font-style: italic;
+	margin-bottom: 20px;
+}
+
+span.find_stone{
+	font-weight: bold;
+	font-style: normal;
+	color: white;
+}
+
+p.find_desc {
+	padding: 0;
+}
+
+img.find_img {
+	float: right;
+}
+
  
 div#navbar {
 	/*background-color: #00471f;*/
