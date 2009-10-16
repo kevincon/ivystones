@@ -1,7 +1,14 @@
-<?php #script 7.3 register.php
+<?php
 
 $page_title = 'Home';
-$percent = 20;
+
+require_once('mysql_connect.php'); //connect to db
+
+$sql_result = mysql_query('SELECT distinct stone_id FROM findings');
+$num_stones = mysql_num_rows($sql_result);
+$tot_stones = 175;
+$percent = (int)($num_stones/$tot_stones * 100);
+
 include('header.php');
 			echo'<div id ="left">
 				<div>
@@ -56,7 +63,6 @@ if(isset($_POST['submitted'])) {
 	if(empty($errors)) { //if everything is ok
 	
 	    // add user to the database
-	    require_once('mysql_connect.php'); //connect to db
 	    
 	    //make the db query
 	    $query="INSERT INTO members (First_Name, Last_Name, Email, Password)

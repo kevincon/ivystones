@@ -26,6 +26,7 @@ if(isset($_POST['submitted'])) {
 		$desc = trim($_POST['description']);
 	}
 	
+	$date = $_POST['year'] + "-" + $_POST['month'] + "-" + $_POST['day'];
 	
 	if(empty($errors)) { //if everything is ok
 	
@@ -33,14 +34,14 @@ if(isset($_POST['submitted'])) {
 	    require_once('mysql_connect.php'); //connect to db
 	    
 	    //make the db query
-	    $query="INSERT INTO findings (First_Name, Last_Name, Email, Password)
-	    VALUES ('$fn','$ln','$e', SHA('$p'))";
+	    $query="INSERT INTO findings (stone_id, user_id, date_found, location, notes)
+	    VALUES ('$selected','$uid','$date','$loc','$desc')";
 	    $result =@mysql_query ($query); //run the query
 	    
 	    if($result) { //query sucessful
 	    
-	        echo"<h1> Loggging Successful!</h1>
-	            <p> You have now logged a find of the ivy stone of the class of $selected . </p>\n";
+	        echo"<h1> Logging Successful!</h1>
+	            <p> You have now logged a find of the Ivy Stone of the Class of $selected. </p>\n";
 				
 	    } else {
 	        echo '<h1> System Error </h1>';
@@ -124,7 +125,7 @@ TEXT;
 					<option value='30'>30</option>
 					<option value='31'>31</option>
 				</select>
-				<select id="birthyear" name="birthyear" style="width: 55px">
+				<select id="year" name="year" style="width: 55px">
 					<option value="2009">2009</option>
 					<option value="2008">2008</option>
 					<option value="2007">2007</option>
