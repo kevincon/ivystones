@@ -7,6 +7,8 @@ if (!isset($page_title))
 	$page_title = "Try Again";
 
 $name = $_SESSION['first_name'];
+$uid = $_SESSION['user_id'];
+
 $not_logged_content = <<<TEXT
 					<input type="text" name="username" size="20" maxlength="50" id="username" value="Email" style="margin-bottom: 5px; color: #666;" onfocus="clearText(this);" onblur="addText(this);" />
 					<script type="text/javascript">
@@ -78,20 +80,6 @@ if(isset($_POST['login']))
             //$errors[] = mysql_error() . '<br /><br />Query: ' . $query; // Debugging message
           }
      } // end of if(empty($errors))
-	 
-/* 	 if (!empty($errors)){
-	 	//header("Location: index.php");
-		echo'<div style="margin: 15px;">
-			<h1>Error!</h1>
-			<script type="text/javascript">
-				alert("what?");
-			</script>
-	    <p>The following error(s) occured: <br />';
-	    foreach($errors as $msg) { //print each error
-	        echo " - $msg<br />\n";
-	    }
-	    echo '</p><p>Please try again. </p><p><br /></p></div>';
-     } */
 	 
      mysql_close(); //close the database connection.
 } else { //form has not been submitted.
@@ -175,7 +163,6 @@ if ($logout) {
 					</li>
 				</ul>
 			</div>
-			<div id="errors">
 			<?php
 				if (!empty($errors)){
 					echo'<div style="margin: 15px;">
@@ -187,4 +174,3 @@ if ($logout) {
 					echo '</p><p>Please try again. </p><p><br /></p></div>';
 				}
 			?>
-			</div>
