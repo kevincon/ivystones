@@ -93,28 +93,32 @@ if(isset($_POST['submitted'])) {
 	
     }
 }
-?>
 
-	
-				<form action="index.php" method="post">
+
+				if (isset($name)) {
+				echo '<div align="center"><h1>Welcome, ' . $name . '!</h1><br><br><h3><a href="profile.php">View Your Profile</a></h3><br><h3><a href="stones.php">Look Up A Stone</a></h3></div><br><br><br><br><br><br><br><br>';
+				}
+				else
+				{
+				echo '<form action="index.php" method="post">
 					<h1>Become an Ivy Stoner!</h1>
 					<table>
 						<tr>					
 							<td>First Name:</td>
 							<td>
-								<input type="text" name="first_name" size="20" maxlength="20" value="<?php if (isset($_POST['first_name'])) echo $_POST['first_name']; ?>" />
+								<input type="text" name="first_name" size="20" maxlength="20" value="" />
 							</td>
 						</tr>
 						<tr>
 							<td>Last Name:</td>
 							<td>
-								<input type="text" name="last_name" size="20" maxlength="30" value="<?php if (isset($_POST['last_name'])) echo $_POST['last_name']; ?>" />
+								<input type="text" name="last_name" size="20" maxlength="30" value="" />
 							</td>
 						</tr>
 						<tr>
 							<td>Your Email:</td>
 							<td>
-								<input type="text" name="email" size="20" maxlength="40" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>" />
+								<input type="text" name="email" size="20" maxlength="40" value="" />
 							</td>
 						</tr>
 						<tr>
@@ -136,7 +140,9 @@ if(isset($_POST['submitted'])) {
 						</tr>
 					</table>
 					<input type="hidden" name="submitted" value="TRUE" />
-					</form>
+					</form>';					
+					}
+?>
 			</div>
 
 		</div>

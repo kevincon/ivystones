@@ -283,8 +283,10 @@ TEXT;
 		<tr>
 			<td>Picture:</td>
 			<td>
+				<font color="white">
 				<input type="hidden" name="MAX_FILE_SIZE" value="2000000" />
 				<input type="file" name="picture" value="" />
+				</font>
 			</td>
 		</tr>
 		<tr>
@@ -298,7 +300,7 @@ TEXT;
 TEXT;
 	}
 	else
-		echo "<h1>Log in first to log a find!</h1>";
+		echo '<img src="images/arrow.png">';
 	?>
 </div>
 </div>

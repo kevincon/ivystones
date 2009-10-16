@@ -38,7 +38,7 @@ include('header.php');
 
 						}
 						else
-							echo "<h1>Please log in first!</h1>";
+							echo '<img src="images/arrow.png">';
 					?>
 			</div>
 		</div>

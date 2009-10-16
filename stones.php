@@ -31,6 +31,7 @@ include ('header.php');
 
 <div id="content" style="text-align: center;">
 	<form action="stones.php" method="get">
+		<h1>Stones</h1>
 		<p>Choose a Stone:</p>
 		<select name="stone" id="stones">
 			<option>1873</option>
