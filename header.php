@@ -3,7 +3,8 @@
 session_name('YourVisitID');
 session_start();
 
-$page_title = "Try Again";
+if (!isset($page_title))
+	$page_title = "Try Again";
 
 $name = $_SESSION['first_name'];
 $not_logged_content = <<<TEXT
