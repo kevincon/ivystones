@@ -28,8 +28,8 @@ include('header.php');
 							
 							echo "<li class=\"find\">";
 							if (file_exists($pic))
-								echo "<img class=\"find_img\" src=\"images/$pic\" alt=\"$stone Image\" />";
-							else
+								echo "<img class=\"find_img\" src=\"uploads/$pic\" alt=\"$stone Image\" />";
+ 							
 								echo "<img class=\"find_img\" src=\"images/d_silhouette.gif\" alt=\"$stone Image Replacement\" />";
 							echo "<span class=\"find_stone\">Class of $stone, found $date at $location by $fn $ln</span>";
 							echo "<p class=\"find_desc\">";
