@@ -54,6 +54,7 @@ if(isset($_POST['submitted'])) {
 		$errors[]='Invalid picture, please make sure your picture is in either .JPG or .GIF format and is under 2 MB.';
 	}
 	
+	$file_name = $_FILES["picture"]["name"];
 	$date = $_POST['year']."-".$_POST['month']."-".$_POST['day'];
 	
 	if(empty($errors)) { //if everything is ok
@@ -62,8 +63,8 @@ if(isset($_POST['submitted'])) {
 	    require_once('mysql_connect.php'); //connect to db
 	    
 	    //make the db query
-	    $query="INSERT INTO findings (stone_id, user_id, date_found, location, notes)
-	    VALUES ('$selected','$uid','$date','$loc','$desc')";
+	    $query="INSERT INTO findings (stone_id, user_id, date_found, location, notes, pic_filename)
+	    VALUES ('$selected','$uid','$date','$loc','$desc','$file_name')";
 	    $result =@mysql_query ($query); //run the query
 	    
 	    if($result) { //query sucessful

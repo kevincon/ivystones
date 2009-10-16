@@ -11,7 +11,7 @@ include('header.php');
 							echo "<h3 style=\"float: right;\"><a href=\"stones.php\" style=\"text-decoration: underline;\">Log or View Stones!</a></h3>";
 							echo "<h1>$name's profile</h1>";
 							
-							$pro_result = mysql_query("SELECT stone_id, date_found, location, notes FROM findings WHERE user_id = '$uid'");
+							$pro_result = mysql_query("SELECT stone_id, date_found, location, notes, pic_filename FROM findings WHERE user_id = '$uid'");
 							$num = mysql_num_rows($pro_result);
 							
 							if ($num == 0)
@@ -22,9 +22,10 @@ include('header.php');
 								$date = $row['date_found'];
 								$location = $row['location'];
 								$notes = $row['notes'];
+								$pic = $row['pic_filename'];
 								
 								echo "<li class=\"find\">";
-								echo "<img class=\"find_img\" src=\"images/d_silhouette.gif\" alt=\"$stone Image\" />";
+								echo "<img class=\"find_img\" src=\"images/$pic\" alt=\"$stone Image\" />";
 								echo "<span class=\"find_stone\">Class of $stone, found $date at $location</span>";
 								echo "<p class=\"find_desc\">";
 								echo "<span style=\"font-style: normal;\">Find description: </span>".$notes."</p>";
