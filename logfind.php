@@ -26,7 +26,7 @@ if(isset($_POST['submitted'])) {
 		$desc = trim($_POST['description']);
 	}
 	
-	$date = $_POST['year'] + "-" + $_POST['month'] + "-" + $_POST['day'];
+	$date = $_POST['year']."-".$_POST['month']."-".$_POST['day'];
 	
 	if(empty($errors)) { //if everything is ok
 	
