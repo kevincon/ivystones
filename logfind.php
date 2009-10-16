@@ -2,8 +2,11 @@
 
 $page_title = 'Log a Find';
 $selected = $_GET['stone'];
+
 include('header.php');
+
 echo'<div id ="content">';
+
 //Check is form is submitted
 if(isset($_POST['submitted'])) {
 
@@ -21,13 +24,6 @@ if(isset($_POST['submitted'])) {
 		$errors[]='You forgot to enter a description.';
 	} else {
 		$desc = trim($_POST['description']);
-	}
-	
-	//Check for an email address
-	if(empty($_POST['email'])) {
-	    $errors[]='You forgot to enter the email address.';
-	} else {
-	    $e= trim($_POST['email']);
 	}
 	
 	
@@ -62,22 +58,26 @@ if(isset($_POST['submitted'])) {
 	
     }
 }
-?>
-	<h1 style="text-align: center;">Log a Find</h1>
-	<form action="" method="post">
+
+	if (isset($name)) {
+	
+		echo <<<TEXT
+		<h1 style="text-align: center;">Log a Find</h1>
+		<form action="" method="post">"
 	<table style="margin: auto;">
 		<tr>					
 			<td>Stone:</td>
 			<td>
-				<?php echo $selected;
-					$_POST['stone'] = $selected;
-				?>
+TEXT;
+			echo $selected;
+			$_POST['stone'] = $selected;
+			echo <<<TEXT
 			</td>
 		</tr>
 		<tr>
 			<td>Location:</td>
 			<td>
-				<input type="text" name="location" size="31" maxlength="31" value="<?php if (isset($_POST['location'])) echo $_POST['location']; ?>" />
+				<input type="text" name="location" size="31" maxlength="31" value="" />
 			</td>
 		<tr>
 			<td>Description:</td>
@@ -99,6 +99,11 @@ if(isset($_POST['submitted'])) {
 	</table>
 	<input type="hidden" name="submitted" value="TRUE" />
 	</form>
+TEXT;
+	}
+	else
+		echo "<h1>Log in first to log a find!</h1>";
+	?>
 </div>
 </div>
 </body>
