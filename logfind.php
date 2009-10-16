@@ -26,6 +26,39 @@ if(isset($_POST['submitted'])) {
 		$desc = trim($_POST['description']);
 	}
 	
+	//Check for valid picture
+	if ((($_FILES["picture"]["type"] == "image/gif")
+|| ($_FILES["picture"]["type"] == "image/jpeg")
+|| ($_FILES["picture"]["type"] == "image/pjpeg"))
+&& ($_FILES["picture"]["size"] < 2000000))
+	{
+		if ($_FILES["picture"]["error"] > 0)
+		{
+			echo "Return Code: " . $_FILES["picture"]["error"] . "<br />";
+		}	
+		else
+		{
+			echo "Upload: " . $_FILES["picture"]["name"] . "<br />";
+			echo "Type: " . $_FILES["picture"]["type"] . "<br />";
+			echo "Size: " . ($_FILES["picture"]["size"] / 1024) . " Kb<br />";
+			echo "Temp picture: " . $_FILES["picture"]["tmp_name"] . "<br />";
+			if (file_exists("uploads/" . $_FILES["picture"]["name"]))
+			{
+				echo $_FILES["picture"]["name"] . " already exists. ";
+			}
+			else
+			{
+			move_uploaded_file($_FILES["picture"]["tmp_name"], 
+			"uploads/" . $_FILES["picture"]["name"]);
+			echo "Stored in: " . "uploads/" . $_FILES["picture"]["name"];
+			}
+		}
+	}
+	else
+	{
+		$errors[]='Invalid picture, please make sure your picture is in either .JPG or .GIF format and is under 2 MB.';
+	}
+	
 	$date = $_POST['year']."-".$_POST['month']."-".$_POST['day'];
 	
 	if(empty($errors)) { //if everything is ok
@@ -64,7 +97,7 @@ if(isset($_POST['submitted'])) {
 	
 		echo <<<TEXT
 		<h1 style="text-align: center;">Log a Find</h1>
-		<form action="" method="post">"
+		<form action="" method="post" enctype="multipart/form-data">
 	<table style="margin: auto;">
 		<tr>					
 			<td>Stone:</td>
@@ -254,7 +287,8 @@ TEXT;
 		<tr>
 			<td>Picture:</td>
 			<td>
-				<input type="file" name="picture" size="20" value="" />
+				<input type="hidden" name="MAX_FILE_SIZE" value="2000000" />
+				<input type="file" name="picture" value="" />
 			</td>
 		</tr>
 		<tr>
