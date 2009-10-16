@@ -153,7 +153,6 @@ include ('header.php');
 			<option>1957 Women</option>
 			<option>1958 Men</option>
 			<option>1958 Women</option>
-			<option>1958 Women</option>
 			<option>1959 Men</option>
 			<option>1959 Women</option>
 			<option>1960 Men</option>
