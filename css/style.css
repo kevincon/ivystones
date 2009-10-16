@@ -99,10 +99,16 @@ p#percent {
 	text-shadow: 0.05em 0.05em #333;
 }
 
+ul.biglist {
+	list-style-type: none;
+}
+
 li.find {
 	border-bottom: dashed white 1px;
 	font-style: italic;
 	margin-bottom: 20px;
+	display: block;
+	overflow: auto;
 }
 
 span.find_stone{
@@ -117,6 +123,7 @@ p.find_desc {
 
 img.find_img {
 	float: right;
+	margin-bottom: 5px;
 }
 
  
