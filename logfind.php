@@ -34,23 +34,18 @@ if(isset($_POST['submitted'])) {
 	{
 		if ($_FILES["picture"]["error"] > 0)
 		{
-			echo "Return Code: " . $_FILES["picture"]["error"] . "<br />";
+			$errors[]="Return Code: " . $_FILES["picture"]["error"] . "<br />";
 		}	
 		else
 		{
-			echo "Upload: " . $_FILES["picture"]["name"] . "<br />";
-			echo "Type: " . $_FILES["picture"]["type"] . "<br />";
-			echo "Size: " . ($_FILES["picture"]["size"] / 1024) . " Kb<br />";
-			echo "Temp picture: " . $_FILES["picture"]["tmp_name"] . "<br />";
 			if (file_exists("uploads/" . $_FILES["picture"]["name"]))
 			{
-				echo $_FILES["picture"]["name"] . " already exists. ";
+				$errors[]=$_FILES["picture"]["name"] . " already exists.  Please name your picture something else.";
 			}
 			else
 			{
 			move_uploaded_file($_FILES["picture"]["tmp_name"], 
 			"uploads/" . $_FILES["picture"]["name"]);
-			echo "Stored in: " . "uploads/" . $_FILES["picture"]["name"];
 			}
 		}
 	}
