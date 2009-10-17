@@ -36,7 +36,8 @@ if(isset($_POST['submitted'])) {
 	}
 	
 	//Check for valid picture
-	if(($_POST["picture"] == '')) {
+	$file_name = $_FILES["picture"]["name"];
+	if(($file_name == '')) {
 	}
 	else{
 		if ((($_FILES["picture"]["type"] == "image/gif")
@@ -67,7 +68,7 @@ if(isset($_POST['submitted'])) {
 		}
 	}
 		
-		$file_name = $_FILES["picture"]["name"];
+		
 		$date = $_POST['year']."-".$_POST['month']."-".$_POST['day'];
 	
 	if(empty($errors)) { //if everything is ok
