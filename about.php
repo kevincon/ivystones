@@ -16,7 +16,7 @@ include('header.php');
 					<br>
 					<p>The creators are part of <a href="http://www.kevinschicken.com">Kevin's Chicken</a>, a technology consulting company.</p>
 					<div align="center">
-						<a href="http://www.kevinschicken.com"><img src="images/chicken.png" /></a>
+						<a href="http://www.kevinschicken.com"><img src="images/chicken.png" border="0" /></a>
 						<br>
 						<p>Contact: <a href="mailto:ivystones@kevinschicken.com">ivystones@kevinschicken.com</a></p>
 					</div>

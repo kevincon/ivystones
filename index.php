@@ -101,7 +101,7 @@ if(isset($_POST['submitted'])) {
 				else
 				{
 				echo '<form action="index.php" method="post">
-					<h1>Become an Ivy Stoner!</h1>
+					<h1>Become an IvyStoner!</h1>
 					<table>
 						<tr>					
 							<td>First Name:</td>
