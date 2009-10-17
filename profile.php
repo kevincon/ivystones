@@ -25,10 +25,10 @@ include('header.php');
 								$pic = $row['pic_filename'];
 								
 								echo "<li class=\"find\">";
-								if (isset($pic))
-									echo "<img class=\"find_img\" src=\"uploads/$pic\" alt=\"$stone Image\" width=\"200\" height=\"126\" />";
-								else
+								if ($pic == '')
 									echo "<img class=\"find_img\" src=\"images/d_silhouette.gif\" alt=\"$stone Image Replacement\" />";
+								else
+									echo "<img class=\"find_img\" src=\"uploads/$pic\" alt=\"$stone Image\" width=\"200\" height=\"126\" />";
 								echo "<span class=\"find_stone\">Class of $stone, found $date at $location</span>";
 								echo "<p class=\"find_desc\">";
 								echo "<span style=\"font-style: normal;\">Find description: </span>".$notes."</p>";

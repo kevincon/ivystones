@@ -27,35 +27,39 @@ if(isset($_POST['submitted'])) {
 	}
 	
 	//Check for valid picture
-	if ((($_FILES["picture"]["type"] == "image/gif")
-|| ($_FILES["picture"]["type"] == "image/jpeg")
-|| ($_FILES["picture"]["type"] == "image/pjpeg"))
-&& ($_FILES["picture"]["size"] < 2000000))
-	{
-		if ($_FILES["picture"]["error"] > 0)
+	if(!($_POST["picture"] == '')) {
+	}
+	else{
+		if ((($_FILES["picture"]["type"] == "image/gif")
+	|| ($_FILES["picture"]["type"] == "image/jpeg")
+	|| ($_FILES["picture"]["type"] == "image/pjpeg"))
+	&& ($_FILES["picture"]["size"] < 2000000))
 		{
-			$errors[]="Return Code: " . $_FILES["picture"]["error"] . "<br />";
-		}	
-		else
-		{
-			if (file_exists("uploads/" . $_FILES["picture"]["name"]))
+			if ($_FILES["picture"]["error"] > 0)
 			{
-				$errors[]=$_FILES["picture"]["name"] . " already exists.  Please name your picture something else.";
-			}
+				$errors[]="Return Code: " . $_FILES["picture"]["error"] . "<br />";
+			}	
 			else
 			{
-			move_uploaded_file($_FILES["picture"]["tmp_name"], 
-			"uploads/" . $_FILES["picture"]["name"]);
+				if (file_exists("uploads/" . $_FILES["picture"]["name"]))
+				{
+					$errors[]=$_FILES["picture"]["name"] . " already exists.  Please name your picture something else.";
+				}
+				else
+				{
+				move_uploaded_file($_FILES["picture"]["tmp_name"], 
+				"uploads/" . $_FILES["picture"]["name"]);
+				}
 			}
 		}
+		else
+		{
+			$errors[]='Invalid picture, please make sure your picture is in either .JPG or .GIF format and is under 2 MB.';
+		}
 	}
-	else
-	{
-		$errors[]='Invalid picture, please make sure your picture is in either .JPG or .GIF format and is under 2 MB.';
-	}
-	
-	$file_name = $_FILES["picture"]["name"];
-	$date = $_POST['year']."-".$_POST['month']."-".$_POST['day'];
+		
+		$file_name = $_FILES["picture"]["name"];
+		$date = $_POST['year']."-".$_POST['month']."-".$_POST['day'];
 	
 	if(empty($errors)) { //if everything is ok
 	
@@ -107,7 +111,7 @@ TEXT;
 		<tr>
 			<td>Date Found:</td>
 			<td>
-				<select name=month value='' style="width: 80px">Month</option>
+				<select name=month value='01' style="width: 80px">Month</option>
 					<option value='01'>January</option>
 					<option value='02'>February</option>
 					<option value='03'>March</option>
@@ -121,7 +125,7 @@ TEXT;
 					<option value='11'>November</option>
 					<option value='12'>December</option>
 				</select>
-				<select name=day value='' style="width: 40px">Day</option>
+				<select name=day value='01' style="width: 40px">Day</option>
 					<option value='01'>01</option>
 					<option value='02'>02</option>
 					<option value='03'>03</option>
@@ -154,7 +158,7 @@ TEXT;
 					<option value='30'>30</option>
 					<option value='31'>31</option>
 				</select>
-				<select id="year" name="year" style="width: 55px">
+				<select id="year" name="year" value="2009" style="width: 55px">
 					<option value="2009">2009</option>
 					<option value="2008">2008</option>
 					<option value="2007">2007</option>
