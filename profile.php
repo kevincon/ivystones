@@ -38,7 +38,7 @@ include('header.php');
 
 						}
 						else
-							echo '<img src="images/arrow.png">';
+							echo '<img src="images/arrow.png"><br><p>...or register a new account <a href="index.php">here</a>.</p>';
 					?>
 			</div>
 		</div>
