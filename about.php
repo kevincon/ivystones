@@ -14,7 +14,12 @@ include('header.php');
 					<img src="images/team.jpg" border="5" style="float: left; margin: 0 15px 20px 0; " />
 					<p>IvyStones was created by Sam Appelbaum, Varun Sampath, and Kevin Conley for the University of Pennsylvania's first <a href="http://www.pennapps.com">PennApps competition</a> in 2009.</p>
 					<br>
-					<p>The creators are part of <a href="http://www.kevinschicken.com">Kevin's Chicken</a>, a technology consulting company.
+					<p>The creators are part of <a href="http://www.kevinschicken.com">Kevin's Chicken</a>, a technology consulting company.</p>
+					<div align="center">
+						<a href="http://www.kevinschicken.com"><img src="images/chicken.png" /></a>
+						<br>
+						<p>Contact: <a href="mailto:ivystones@kevinschicken.com">ivystones@kevinschicken.com</a></p>
+					</div>
 				</div>
 			</div>	
 		</div>
