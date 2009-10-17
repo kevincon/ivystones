@@ -12,6 +12,15 @@ if(isset($_POST['submitted'])) {
 
     $errors=array(); //Initialize error array.
     
+	//Check to see if player already found this stone
+	require_once('mysql_connect.php'); //connect to db
+	$stone_result = mysql_query("SELECT stone_id, date_found, location, notes, pic_filename FROM findings WHERE user_id = '$uid' AND stone_id = '$selected'");
+	//mysql_close(); //close the db connection
+	$num = mysql_num_rows($stone_result);
+	if($num != 0){
+		$errors[]='You already found this stone.';
+	}
+	
 	//Check for location
 	if(empty($_POST['location'])) {
 		$errors[]='You forgot to enter a location.';
@@ -27,7 +36,7 @@ if(isset($_POST['submitted'])) {
 	}
 	
 	//Check for valid picture
-	if(!($_POST["picture"] == '')) {
+	if(($_POST["picture"] == '')) {
 	}
 	else{
 		if ((($_FILES["picture"]["type"] == "image/gif")
@@ -64,7 +73,7 @@ if(isset($_POST['submitted'])) {
 	if(empty($errors)) { //if everything is ok
 	
 	    // add user to the database
-	    require_once('mysql_connect.php'); //connect to db
+	    //require_once('mysql_connect.php'); //connect to db
 	    
 	    //make the db query
 	    $query="INSERT INTO findings (stone_id, user_id, date_found, location, notes, pic_filename)
