@@ -37,6 +37,7 @@ if(isset($_POST['submitted'])) {
 	
 	//Check for valid picture
 	$file_name = $_FILES["picture"]["name"];
+	if(empty($errors)){
 	if(($file_name == '')) {
 	}
 	else{
@@ -67,7 +68,7 @@ if(isset($_POST['submitted'])) {
 			$errors[]='Invalid picture, please make sure your picture is in either .JPG or .GIF format and is under 2 MB.';
 		}
 	}
-		
+	}	
 		
 		$date = $_POST['year']."-".$_POST['month']."-".$_POST['day'];
 	
@@ -295,7 +296,7 @@ TEXT;
 			</td>
 		</tr>
 		<tr>
-			<td>Picture:</td>
+			<td>Picture:<br>(optional)</td>
 			<td>
 				<font color="white">
 				<input type="hidden" name="MAX_FILE_SIZE" value="2000000" />
