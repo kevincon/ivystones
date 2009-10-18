@@ -136,7 +136,7 @@ TEXT;
 					<option value='11'>November</option>
 					<option value='12'>December</option>
 				</select>
-				<select name=day value='01' style="width: 40px">Day</option>
+				<select name=day value='01' style="width: 50px">Day</option>
 					<option value='01'>01</option>
 					<option value='02'>02</option>
 					<option value='03'>03</option>
